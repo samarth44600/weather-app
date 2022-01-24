@@ -4,7 +4,7 @@
 }
 
 .weather-main-div {
-  background-color: black;
+  background-color: rgb(56, 56, 56);
   height: 100vh;
   padding: 3rem;
 }
@@ -39,7 +39,7 @@
   color: white;
   font-size: 15px;
   -webkit-box-shadow: 1px 1px 2px 1px grey;
-          box-shadow: 1px 1px 2px 1px grey;
+  box-shadow: 1px 1px 2px 1px grey;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -53,7 +53,7 @@
 .weather-main-div .search-comp .city-search-btn:active {
   border-radius: 0.6rem;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .weather-main-div .weather-data-active {
@@ -72,7 +72,8 @@
   font-size: 1.4rem;
 }
 
-.weather-main-div .weather-data-inactive, .weather-main-div .loading-not-necessary {
+.weather-main-div .weather-data-inactive,
+.weather-main-div .loading-not-necessary {
   display: none;
 }
 

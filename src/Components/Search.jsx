@@ -7,7 +7,7 @@ export const Search = () => {
   console.log(value);
   const cityInput = useRef();
   useEffect(() => {
-    dispatch(Fetch("Birgunj"));
+    dispatch(Fetch("Kathmandu"));
   }, [dispatch]);
   //after button clicked
   const clicked = (event) => {
@@ -24,20 +24,21 @@ export const Search = () => {
           className="city-name-index"
           ref={cityInput}
         />
-        <input
-          className="search-button"
-          type="submit"
-          value="Search"
-          className="city-search-btn"
-        />
+        <input type="submit" value="Search" className="city-search-btn" />
       </form>
 
       <div className={value ? "weather-data-active" : "weather-data-inactive"}>
-        <h1 className='country-name'>{value ? value.data.location.name: ""}</h1>
-        <h2 className='city-name'>{value ? value.data.location.country : ""}</h2>
-        <h3 className='temp-c'>{value ? value.data.current.temp_c + "°C" : ""}</h3>
+        <h1 className="country-name">
+          {value ? value.data.location.name : ""}
+        </h1>
+        <h2 className="city-name">
+          {value ? value.data.location.country : ""}
+        </h2>
+        <h3 className="temp-c">
+          {value ? value.data.current.temp_c + "°C" : ""}
+        </h3>
         <img
-          className='weather-info-pic'
+          className="weather-info-pic"
           src={value ? value.data.current.condition.icon : ""}
           alt={value ? value.data.current.condition.text : ""}
         />
